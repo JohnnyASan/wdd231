@@ -20,6 +20,10 @@ body {
 	font-family: "Sansita", sans-serif;
 }
 
+header img {
+    max-width: 50px;
+}
+
 /* mobile **************************/
 header {
 	background-color: #bbb;
