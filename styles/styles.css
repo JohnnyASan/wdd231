@@ -23,11 +23,12 @@ body {
 
 header img {
     max-width: 50px;
+    border-radius: 50%;
 }
 
 /* mobile **************************/
 header {
-	background-color: var(--accent1-color);
+	background-color: var(--accent2-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
