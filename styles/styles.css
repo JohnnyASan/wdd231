@@ -34,6 +34,7 @@ header {
 	justify-content: center;
 	padding: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header img {
@@ -55,12 +56,14 @@ h1 {
     flex-direction: column;
 }
 
-.hamburger div {
-    margin: 3px;
-    width: 30px;
-    height: 5px;
-    background-color: var(--secondary-color);  
-}
+.hamburger span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
 
 nav {
 	background-color: var(--primary-color);
@@ -183,6 +186,18 @@ footer {
 @media (max-width: 639px) {
     .courseBlock {
         flex: 0 0 100%;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-right: 5px;
+    }
+
+    nav {
+        display: none;
     }
 }
 
