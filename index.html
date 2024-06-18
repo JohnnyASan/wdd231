@@ -11,9 +11,10 @@
 </head>
 <body>
     <header>
-        <img src="images/profile_img.jpg" >
-        
+        <img src="images/profile_img.webp" >
+        <h1>Johnny Sanabria</h1>
     </header>
+    <div class="hamburger"></div>
     <nav>
         <ul>
             <li><a href="#" class="active">Home</a></li>
@@ -23,25 +24,35 @@
         </ul>           
     </nav>
     <main>
-        <section class="section1">
+        <section class="courseWork module">
             <h2>Course Work</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>WDD 130: Web Fundamentals</li>
+                <li>CSE 110: Intro to Programming</li>
+                <li>CSE 270: Software Testing</li>
             </ul>
         </section>
-        <section class="section2">
+        <section class="utah module">
             <h2>Utah, USA</h2>
-            <img>
+            <figure>
+                <img src="images/wasatch-mountains-utah-utah-images.webp">
+                <figcaption>Mountains</figcaption>
+            </figure>
         </section>
-        <section class="section2">
+        <section class="webCertificate module">
             <h2>Web and Computer Programming Certificate</h2>
-        </section>
+            <div class="certificateFilter">
+                <button class="filterButton active" data-filter="All">All</button>
+                <button class="filterButton" data-filter="CSE">CSE</button>
+                <button class="filterButton" data-filter="WDD">WDD</button>
+            </div>
+            <div class="coursesList">
+                <!-- Courses to be inserted by JavaScript -->
+            </div>
     </main>
     <footer>
         <p>
-            <span id="currentYear"></span> 🎸
+            @<span id="currentYear"></span> 🎸
             <span>Johnny Sanabria</span> 🎸
             <span>Utah, USA</span>
         </p>
