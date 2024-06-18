@@ -1,8 +1,9 @@
-const currentYear = document.querySelectorAll('.currentYear');
+
+const currentYear = document.getElementById('currentYear');
 currentYear.textContent = new Date().getUTCFullYear();
 
-const lastModified = document.querySelectorAll('.lastModified');
-lastModified.textContent = `Last Updated on <i>${document.lastModified}</i>`;
+const lastModified = document.getElementById('lastModified');
+lastModified.innerHTML = `Last Updated on <i>${document.lastModified}</i>`;
 
 const courses = [
     {
@@ -15,7 +16,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -28,7 +29,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -40,7 +41,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -52,7 +53,7 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -66,7 +67,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -84,14 +85,34 @@ const courses = [
     }
 ];
 
-const filterButtons = document.querySelectorAll('.filterButton');
-const courseList = document.querySelectorAll('.courseList');
 
+const coursesList = document.querySelector('.coursesList');
 
 function populateClasses(filter) {
-    courses.filter(c => filter.toLowerCase() === 'all' || filter.toLowerCase() === c.subject.toLowerCase())
+    coursesList.innerHTML = '';
+    courses
+    .filter(c => 
+        filter.toLowerCase() === 'all' || filter.toLowerCase() === c.subject.toLowerCase()
+    )
     .forEach(c => {
         const block = document.createElement('div');
-        
+        block.classList.add('courseBlock');
+        block.innerHTML = `${c.subject} ${c.number}`;
+        block.classList.add(c.completed === true ? 'complete' : 'incomplete');
+        coursesList.appendChild(block);
     });
 }
+
+const filterButtons = document.querySelectorAll('.filterButton');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        populateClasses(btn.getAttribute('courseFilter'));
+    });
+});
+
+populateClasses('All');
+
+
