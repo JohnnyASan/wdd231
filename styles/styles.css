@@ -5,7 +5,7 @@
     --secondary-color: #f9fafa;
     --accent1-color: #d5d8d9;
     --accent2-color: #f2b143;
-    --accent3-color: #566872;
+    --accent3-color: #04293d;
 
     --heading-font: 'Madimi One', sans-serif; 
     --paragraph-font: 'Roboto', sans-serif;
@@ -84,7 +84,8 @@ nav a:hover {
 }
 
 .active {
-	color: var(--accent2-color);
+	background-color: var(--accent2-color);
+    color: black;
 }
 
 main {
@@ -147,6 +148,7 @@ figcaption {
 .filterButton.active {
     background-color: var(--primary-color);
     font-weight: bold;
+    color: var(--secondary-color);
 }
 
 .coursesList {
@@ -165,8 +167,8 @@ figcaption {
 }
 
 .courseBlock.complete {
-    background-color: var(--accent3-color);
-    color: var(--secondary-color);
+    background-color: var(--accent2-color);
+    color: black;
 }
 
 footer {
