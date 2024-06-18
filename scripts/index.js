@@ -109,7 +109,7 @@ filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        populateClasses(btn.getAttribute('courseFilter'));
+        populateClasses(btn.getAttribute('value'));
     });
 });
 
