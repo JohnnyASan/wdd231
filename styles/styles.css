@@ -196,13 +196,16 @@ footer {
         padding-right: 5px;
     }
 
-    nav {
+    /* nav {
         display: none;
-    }
+    } */
 }
 
 /* Larger Views ******************************/
 @media (min-width: 640px) {
+    nav {
+        display: block;
+    }
 	nav ul {
 		display: flex;
 	}
