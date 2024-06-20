@@ -97,7 +97,7 @@ function populateClasses(filter) {
     .forEach(c => {
         const block = document.createElement('div');
         block.classList.add('courseBlock');
-        block.innerHTML = `${c.subject} ${c.number}`;
+        block.innerHTML = `${c.subject} ${c.number}<br>${c.credits} credit hours`;
         block.classList.add(c.completed === true ? 'complete' : 'incomplete');
         coursesList.appendChild(block);
     });
@@ -136,7 +136,17 @@ window.addEventListener('resize', function(event) {
         navBar.style.display = "block";
 }, true);
 
+const totalCredits = document.querySelector('#totalCredits');
 
+function calcTotalCredits() {
+    const initialVal = 0;
+    const total = courses.reduce((accumulator, currentValue) => currentValue.credits + accumulator, initialVal,);
+    const h3 = document.createElement('h3');
+    h3.innerHTML = `<h3>Total Credits: ${total}</h3>`;
+    totalCredits.appendChild(h3);
+}
+
+calcTotalCredits();
 
 
 
