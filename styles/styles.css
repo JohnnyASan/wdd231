@@ -50,6 +50,20 @@ h1 {
 	font-size: 2rem;
 }
 
+#hamburgerButton::before {
+    content: '=';
+}
+
+#hamburgerButton {
+    font-size: 2rem;
+    background: none;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;

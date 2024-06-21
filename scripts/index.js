@@ -117,19 +117,21 @@ filterButtons.forEach(btn => {
 populateClasses('All');
 
 const navBar = document.querySelector('#navBar');
-function toggleNav() {
-    if (navBar.style.display === "none") {
-        navBar.style.display = "block";
-    } 
-    else {
-        navBar.style.display = "none";
-    }
-}
+// function toggleNav() {
+//     if (navBar.style.display === "none") {
+//         navBar.style.display = "block";
+//     } 
+//     else {
+//         navBar.style.display = "none";
+//     }
+// }
 
-const hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('click', () => {
-    toggleNav();
-});
+// const hamburger = document.querySelector('.hamburger');
+// hamburger.addEventListener('click', () => {
+//     toggleNav();
+// });
+
+const hamburger = document.querySelector('#hamburgerButton');
 
 window.addEventListener('resize', function(event) {
     if (window.innerWidth >= 640)
