@@ -24,7 +24,7 @@
         <p>Chamber of Commerce</p>
     </header>
     <nav id="navElement">
-        <button id="navButton"></button>
+        <button id="navButton" type="button"></button>
         <ul class="menuLinks">
             <li><a href="#" title="Home">Home</a></li>
             <li class="currentMenuItem"><a href="#" title="Directory">Directory</a></li>
@@ -35,7 +35,12 @@
     
     <div id="darkMode"></div>
     <main>
-        <div id="membersList" class="oneColGrid"></div>
+        <div class="layoutButtons">
+            <button id="oneColButton" type="button" value="oneColGrid">Single Column</button>
+            <button id="threeColButton" class="selected" type="button" value="threeColGrid">Triple Column</button>
+        </div>
+        
+        <div id="membersList" class="threeColGrid"></div>
     </main>
     <footer id="footer"></footer>
 </body>

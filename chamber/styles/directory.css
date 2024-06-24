@@ -1,21 +1,46 @@
 @import url("./common.css");
 
 .threeColGrid {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .oneColGrid {
-    display: grid;
     grid-template-columns: 1fr;
+    /* max-width: 50%; */
+}
+
+#membersList {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #membersList div figure img {
     max-width: 100px;
 }
 
-#membersList card {
-    width: 100px;
-    height: 100px;
+#membersList .memberCard {
+    background-color: var(--accent1-color);
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    height: 340px;
 }
 
+.layoutButtons {
+    margin: 10px;
+}
+
+.layoutButtons button.selected {
+    cursor: pointer;
+    background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+main {
+    text-align: center !important;
+}
