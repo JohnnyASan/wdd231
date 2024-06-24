@@ -1,4 +1,5 @@
 @import url("./large.css");
+
 :root {
     --primary-color: #255876;
     --secondary-color: #f9fafa;
@@ -82,7 +83,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--accent2-color);
-    position: absolute;
+    position: sticky;
     bottom: 0;
     height: auto;
     width: 100%;
