@@ -21,15 +21,14 @@ threeColButton.addEventListener('click', () => {
 async function displayMembers() {
     const membersResponse = await fetch('./data/members.json');
     const members = await membersResponse.json();
-    // console.log(members);
 
     members.forEach(m => {
-        console.log(m);
         const card = document.createElement('div');
         card.classList.add('memberCard');
 
         const fig = document.createElement('figure');
         const logo = document.createElement('img');
+        
         const caption = document.createElement('figcaption');
         caption.innerHTML = 
         `
@@ -40,6 +39,7 @@ async function displayMembers() {
         <a href="${m.website}">Website</a>
         `;
         logo.src = m.imageUrl;
+        logo.alt = `${m.name} logo`;
 
         fig.appendChild(logo);
         fig.appendChild(caption);
