@@ -5,15 +5,20 @@ const oneColButton = document.querySelector('#oneColButton');
 const threeColButton = document.querySelector('#threeColButton');
 
 oneColButton.addEventListener('click', () => {
-    oneColButton.classList.toggle('selected');
-    threeColButton.classList.toggle('selected');
+    if (membersList.classList.contains('threeColGrid')) {
+        oneColButton.classList.toggle('selected');
+        threeColButton.classList.toggle('selected');
+    }
     membersList.classList.remove('threeColGrid');
     membersList.classList.add('oneColGrid');
 });
 
 threeColButton.addEventListener('click', () => {
-    oneColButton.classList.toggle('selected');
-    threeColButton.classList.toggle('selected');
+    if (membersList.classList.contains('oneColGrid')) {
+        oneColButton.classList.toggle('selected');
+        threeColButton.classList.toggle('selected');
+    }
+    
     membersList.classList.remove('oneColGrid');
     membersList.classList.add('threeColGrid');
 });
