@@ -1,4 +1,21 @@
-@import url("./common.css")
+@import url("./common.css");
 
+.threeColGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+.oneColGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#membersList div figure img {
+    max-width: 100px;
+}
+
+#membersList card {
+    width: 100px;
+    height: 100px;
+}
 

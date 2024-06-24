@@ -18,6 +18,11 @@ header {
     background-color: var(--accent2-color);
 }
 
+header img {
+    width: 100px;
+    margin: 5px;
+}
+
 nav {
     display: grid;
     grid-template-rows: 0fr;
@@ -81,11 +86,20 @@ footer {
     bottom: 0;
     height: auto;
     width: 100%;
-    justify-content: center;
+    /* justify-content: space-between; */
+    justify-items: center;
     align-items: center;
 }
 
 .footerCell {
     padding: 8px;
     padding-top: 20px;
+}
+
+.footerCell a img {
+    height: 40px;
+}
+
+.footerCell p {
+    padding: 0;
 }
