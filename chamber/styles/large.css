@@ -2,6 +2,11 @@
 @media only screen and (min-width: 38rem) {
     #navButton {
         display: none;
+        
+    }
+
+    nav {
+        grid-template-rows: 1fr !important;
     }
 
     ul.menuLinks, ul.menuLinks.open {
@@ -13,7 +18,7 @@
         background-color: rgba(255,255,255,0.2);
     }
 
-    nav {
-        grid-template-rows: 1fr;
+    footer {
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
 }
