@@ -11,6 +11,14 @@
     --paragraph-font: 'Roboto', sans-serif;
 }
 
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--paragraph-font);
+}
+
 body {
     margin: 0;
 }
