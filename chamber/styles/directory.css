@@ -47,3 +47,19 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 37.999rem) {
+    .layoutButtons {
+        display: none;
+    }
+
+    .threeColGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .oneColGrid {
+        grid-template-columns: 1fr;
+        /* max-width: 50%; */
+    }
+}
+
