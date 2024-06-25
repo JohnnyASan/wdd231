@@ -19,6 +19,7 @@ p {
 
 body {
     margin: 0;
+    /* margin-bottom: 225px; */
 }
 
 header {
@@ -42,6 +43,7 @@ nav ul {
     padding-left: 0;
     overflow: hidden;
     background-color: var(--primary-color);
+    margin: 0;
 }
 
 ul.menuLinks li a {
@@ -90,7 +92,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--accent2-color);
-    position: sticky;
+    margin-top: auto;
+    left: 0;
     bottom: 0;
     height: auto;
     width: 100%;
@@ -111,6 +114,7 @@ footer {
 .footerCell p {
     padding: 0;
 }
+
 
 /* Large CSS */
 @media only screen and (min-width: 38rem) {
