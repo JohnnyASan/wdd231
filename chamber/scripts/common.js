@@ -34,5 +34,5 @@ lastModified.innerHTML = `Last Updated on <i>${document.lastModified}</i>`;
 const currentYear = document.getElementById('currentYear');
 currentYear.textContent = "@ " + new Date().getUTCFullYear() + " Naples UT Chamber of Commerce";
 
-export currentYear 
-export lastModified
+// export currentYear 
+// export lastModified
