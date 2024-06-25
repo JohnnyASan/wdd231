@@ -6,7 +6,6 @@
 
 .oneColGrid {
     grid-template-columns: 1fr;
-    /* max-width: 50%; */
 }
 
 #membersList {
@@ -53,13 +52,8 @@ main {
         display: none;
     }
 
-    .threeColGrid {
+    .threeColGrid, .oneColGrid {
         grid-template-columns: 1fr;
-    }
-    
-    .oneColGrid {
-        grid-template-columns: 1fr;
-        /* max-width: 50%; */
     }
 }
 
