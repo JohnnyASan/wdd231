@@ -103,13 +103,16 @@ async function loadBusinessCards() {
             const card = document.createElement('div');
             card.classList.add('businessCard');
     
+            const businessCardHeader = document.createElement('h3');
+            businessCardHeader.innerText = `${m.name}`;
+            card.appendChild(businessCardHeader);
+
             const fig = document.createElement('figure');
             const logo = document.createElement('img');
             
             const caption = document.createElement('figcaption');
             caption.innerHTML = 
             `
-            <h3>${m.name}</h3>
             <p>${m.phone}</p>
             <p>${m.address1}</p>
             <p>${m.address2}</p>
