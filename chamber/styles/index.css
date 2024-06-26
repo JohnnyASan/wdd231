@@ -138,3 +138,16 @@ section h2 {
 .businessCard figure figcaption {
     grid-column: 2/3;
 }
+
+@media only screen and (max-width: 37.999rem) {
+
+    #events, #currentWeather, #weatherForecast {
+        grid-column: 1/4;
+    }
+
+
+    .businessCards {
+        grid-template-columns: 1fr !important;
+
+    }
+}
