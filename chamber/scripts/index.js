@@ -36,17 +36,41 @@ function loadEvents() {
     }
 }
 
-function loadCurrentWeather() {
-    const heading = document.createElement('h3');
-    heading.innerText = 'Current Weather';
-    currentWeather.appendChild(heading);
+function loadCurrentWeather(data) {
+    const iconsrc = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
+    const icon = document.querySelector('#currentWeatherIcon');
+    icon.setAttribute('src', iconsrc);
+    icon.setAttribute('alt', `${data.list[0].weather[0].description} weather icon`);
+
+    const descrip = document.querySelector('#currentWeatherDescription');
+    descrip.innerText = data.list[0].weather[0].description;
+
+    const temp = document.querySelector('#currentWeatherTemp');
+    temp.innerHTML = `<strong>${data.list[0].main.temp.toFixed(0)}&deg;F</strong>`;
+
+    const high = document.querySelector('#currentWeatherHigh');
+    high.innerHTML = `High: ${data.list[0].main.temp_max.toFixed(0)}&deg;`;
+
+    const low = document.querySelector('#currentWeatherLow');
+    low.innerHTML = `Low: ${data.list[0].main.temp_min.toFixed(0)}&deg;`;
+
+    const humidity = document.querySelector('#currentWeatherHumidity');
+    humidity.innerHTML = `Humidity: ${data.list[0].main.humidity}%`;
+
+    const sunrise = document.querySelector('#currentWeatherSunrise');
+    let sunriseDate = new Date(data.city.sunrise * 1000);
+    let sunriseStr = sunriseDate.toLocaleString();
+    sunriseStr = sunriseStr.substring(sunriseStr.indexOf(',') +1, sunriseStr.length);
+    sunrise.innerText = `Sunrise: ${sunriseStr}`;
+
+    const sunset = document.querySelector('#currentWeatherSunset');
+    let sunsetDate = new Date(data.city.sunset * 1000);
+    let sunsetStr = sunsetDate.toLocaleString();
+    sunsetStr = sunsetStr.substring(sunsetStr.indexOf(',') +1, sunsetStr.length);
+    sunset.innerText = `Sunset: ${sunsetStr}`;
 }
 
 function loadWeatherForecast(data) {
-    const heading = document.createElement('h3');
-    heading.innerText = 'Weather Forecast';
-    weatherForecast.appendChild(heading);
-    
     let todayDate = new Date();
     const today = document.createElement('p');
     today.innerHTML = `Today: <strong>${data.list[0].main.temp.toFixed(0)}&deg;F</strong>`;
@@ -54,7 +78,6 @@ function loadWeatherForecast(data) {
 
     const tomorrow = document.createElement('p');
     const tomorrowDate = new Date(todayDate.getFullYear(), todayDate.getMonth(), todayDate.getDate()+1);
-    console.log(tomorrowDate.getDate());
     tomorrow.innerHTML = `${tomorrowDate.toLocaleString('en-us', {  weekday: 'long' })}: <strong>${data.list[8].main.temp.toFixed(0)}&deg;F</strong>`;
     weatherForecast.appendChild(tomorrow);
 
@@ -66,7 +89,7 @@ function loadWeatherForecast(data) {
 
 async function loadWeather() {
     const data = await fetchWeather();
-    loadCurrentWeather();
+    loadCurrentWeather(data);
     loadWeatherForecast(data);
 }
 
