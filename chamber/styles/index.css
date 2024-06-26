@@ -2,6 +2,8 @@
 
 main {
     height: 100%;
+    /* margin-left: 15vh;
+    margin-right: 15vh; */
 }
 
 .heroImage {
@@ -20,4 +22,46 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.heroContent h3 {
+    color: var(--secondary-color);
+    font-size: xx-large;
+}
+
+section h2 {
+    display: none;
+}
+
+.infoBoxes {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.infoBoxes > div {
+    background-color: var(--accent1-color);
+    margin: 10px;
+}
+
+.infoBoxes > div > h3 {
+    background-color: var(--accent2-color);
+    /* color: var(--accent1-color); */
+    margin: 0;
+    padding-top: 5px;
+}
+
+.infoBoxes > div > h3,p {
+    padding-left: 10px;
+}
+
+#events {
+    grid-column: 1/2;
+}
+
+#currentWeather {
+    grid-column: 2/3;
+}
+
+#weatherForecast {
+    grid-column: 3/4;
 }
