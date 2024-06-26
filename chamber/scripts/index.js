@@ -91,3 +91,41 @@ async function loadWeather() {
 
 loadWeather();
 loadEvents();
+
+const businessCards = document.querySelector('.businessCards');
+
+async function loadBusinessCards() {
+    const membersResponse = await fetch('./data/members.json');
+    const members = await membersResponse.json();
+    var count = 0;
+    members.forEach(m => {
+        if (count < 3) {
+            const card = document.createElement('div');
+            card.classList.add('businessCard');
+    
+            const fig = document.createElement('figure');
+            const logo = document.createElement('img');
+            
+            const caption = document.createElement('figcaption');
+            caption.innerHTML = 
+            `
+            <h3>${m.name}</h3>
+            <p>${m.phone}</p>
+            <p>${m.address1}</p>
+            <p>${m.address2}</p>
+            <a href="${m.website}">Website</a>
+            `;
+            logo.src = m.imageUrl;
+            logo.alt = `${m.name} logo`;
+    
+            fig.appendChild(logo);
+            fig.appendChild(caption);
+            card.appendChild(fig);
+            businessCards.appendChild(card);
+            count++;
+        }
+        
+    });
+}
+
+loadBusinessCards();

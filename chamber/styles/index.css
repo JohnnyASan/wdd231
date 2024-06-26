@@ -88,3 +88,12 @@ section h2 {
 #currentWeatherDescription {
     text-transform: capitalize;
 }
+
+.businessCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.businessCards figure img {
+    height: 50px;
+}
