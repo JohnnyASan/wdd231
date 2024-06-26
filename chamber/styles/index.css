@@ -35,7 +35,7 @@ section h2 {
 
 .infoBoxes {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1.25fr 1fr;
 }
 
 .infoBoxes > div {
@@ -64,4 +64,24 @@ section h2 {
 
 #weatherForecast {
     grid-column: 3/4;
+}
+
+.currentWeatherDetails {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#currentWeatherText p {
+    padding: 1vh;
+    margin: 0;
+    font-size: smaller;
+}
+
+#currentWeatherIcon {
+    grid-column: 1/2;
+    padding: 1vw;
+}
+
+#currentWeatherDescription {
+    text-transform: capitalize;
 }

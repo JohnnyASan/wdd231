@@ -24,11 +24,7 @@ async function fetchWeather() {
     }
 }
 
-function loadEvents() {
-    const heading = document.createElement('h3');
-    heading.innerText = 'Events';
-    events.appendChild(heading);
-    
+function loadEvents() { 
     for (i = 0; i < 5; i++) {
         const p = document.createElement('p');
         p.innerText = `event #${i+1}`;
