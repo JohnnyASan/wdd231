@@ -18,29 +18,37 @@
     <link rel="icon" href="./images/favicon.ico">
 </head>
 <body>
-    <header>
-        <img src="./images/dino_logo.jpeg" alt="Chamber of Commerce logo">
-        <div>
-            <h1>Naples, Utah</h1>
-            <p>Chamber of Commerce</p>
-        </div>
-    </header>
-    <nav id="navElement">
-        <button id="navButton" type="button"></button>
-        <ul class="menuLinks">
-            <li class="currentMenuItem"><a href="#" title="Home">Home</a></li>
-            <li><a href="./directory.html" title="Directory">Directory</a></li>
-            <li><a href="#" title="Join">Join</a></li>
-            <li><a href="#" title="Discover">Discover</a></li>
-        </ul>
-    </nav>
+    <div class="header">
+        <header>
+            <img src="./images/dino_logo.jpeg" alt="Chamber of Commerce logo">
+            <div>
+                <h1>Naples, Utah</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </header>
+        <nav id="navElement">
+            <button id="navButton" type="button"></button>
+            <ul class="menuLinks">
+                <li class="currentMenuItem"><a href="#" title="Home">Home</a></li>
+                <li><a href="./directory.html" title="Directory">Directory</a></li>
+                <li><a href="#" title="Join">Join</a></li>
+                <li><a href="#" title="Discover">Discover</a></li>
+            </ul>
+        </nav>
+    </div>
     
     <main>
-        <div class="heroImage">
+        <section class="heroImage">
             <div class="heroContent">
                 <button type="button" title="keynote">Keynote Tickets</button>
             </div>
-        </div>
+        </section>
+        <section class="cityInfo">
+            <!-- Populated by JavaScript -->
+        </section>
+        <section class="businessCards">
+            <!-- Populated by JavaScript -->
+        </section>
     </main>
     <footer id="footer"></footer>
 </body>
