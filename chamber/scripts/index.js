@@ -132,3 +132,8 @@ async function loadBusinessCards() {
 }
 
 loadBusinessCards();
+
+const joinButton = document.querySelector('#joinButton');
+joinButton.addEventListener('click', () => {
+    location.href = 'https://johnnyasan.github.io/wdd231/chamber/join.html'
+});
