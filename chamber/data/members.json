@@ -6,7 +6,7 @@
         "phone": "435-781-8141",
         "website": "https://www.wyndhamhotels.com/microtel?iata=00093763&cid=PS:dy3on5wpm0lmhkp",
         "imageUrl": "https://www.chamberorganizer.com/vernalchamber/photos/MP4350512302021944P.PNG",
-        "membershipLevel": 1
+        "membershipLevel": "Gold"
     },
     {
         "name": "Vernal Rock Academy",
@@ -15,7 +15,7 @@
         "phone": "435-790-9544",
         "website": "https://www.vernalrockacademy.com/",
         "imageUrl": "https://www.chamberorganizer.com/vernalchamber/photos/MP11084222309145039P.PNG",
-        "membershipLevel": 2
+        "membershipLevel": "Silver"
     },
     {
         "name": "Utah Division of Wildlife Resources",
@@ -24,7 +24,7 @@
         "phone": "435-781-9453",
         "website": "https://wildlife.utah.gov/",
         "imageUrl": "https://docuteam.b-cdn.net/img.php?store=86949&type=logo",
-        "membershipLevel": 3  
+        "membershipLevel": "Gold"
     },
     {
         "name": "Inked Threads",
@@ -33,7 +33,7 @@
         "phone": "435-789-8030",
         "website": "https://www.inkedthreads.biz/",
         "imageUrl": "https://docuteam.b-cdn.net/img.php?store=84695&type=logo",
-        "membershipLevel": 1
+        "membershipLevel": "Silver"
     },
     {
         "name": "Smith's Food & Drug",
@@ -42,7 +42,7 @@
         "phone": "435-789-7135",
         "website": "https://www.smithsfoodanddrug.com/",
         "imageUrl": "https://www.chamberorganizer.com/vernalchamber/photos/MP9293522302023503P.PNG",
-        "membershipLevel": 2 
+        "membershipLevel": "Gold"
     },
     {
         "name": "Mountainlands Family Health Center",
@@ -51,7 +51,7 @@
         "phone": "435-789-2024",
         "website": "https://www.mountainlands.org/",
         "imageUrl": "https://www.chamberorganizer.com/vernalchamber/photos/MP4347222302022141P.PNG",
-        "membershipLevel": 3
+        "membershipLevel": "Silver"
     },
     {
         "name": "Redtail Air",
@@ -60,6 +60,6 @@
         "phone": "435-260-2680",
         "website": "https://flyredtail.com/",
         "imageUrl": "https://www.chamberorganizer.com/vernalchamber/photos/MP11226552312202122P.PNG",
-        "membershipLevel": 2
+        "membershipLevel": "Gold"
     }
 ]

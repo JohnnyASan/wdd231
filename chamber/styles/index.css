@@ -96,8 +96,10 @@ section h2 {
 }
 
 .businessCards figure img {
-    height: 50px;
+    /* height: 50px; */
+    max-width: 75px;
     grid-column: 1/2 !important;
+    padding-top: 5px;
 }
 
 .businessCards figure figcaption > p,a {
@@ -137,6 +139,7 @@ section h2 {
 
 .businessCard figure figcaption {
     grid-column: 2/3;
+    padding-bottom: 5px;
 }
 
 #joinButton {

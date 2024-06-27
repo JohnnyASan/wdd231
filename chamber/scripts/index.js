@@ -8,6 +8,7 @@ const lat = '40.4269052';
 const lon = '-109.4993022';
 const url = `https://api.openweathermap.org/data/2.5/forecast?units=imperial&lat=${lat}&lon=${lon}&appid=${appid}&cnt=20`;
 
+
 async function fetchWeather() {
     try {
         const response = await fetch(url);
@@ -97,37 +98,35 @@ const businessCards = document.querySelector('.businessCards');
 async function loadBusinessCards() {
     const membersResponse = await fetch('./data/members.json');
     const members = await membersResponse.json();
-    var count = 0;
-    members.forEach(m => {
-        if (count < 3) {
-            const card = document.createElement('div');
-            card.classList.add('businessCard');
-    
-            const businessCardHeader = document.createElement('h3');
-            businessCardHeader.innerText = `${m.name}`;
-            card.appendChild(businessCardHeader);
+    const shuffledMembers = members.sort(() => 0.5 - Math.random());
+    const selectedMembers = shuffledMembers.slice(0, 3);
+    selectedMembers.forEach(m => {
+        const card = document.createElement('div');
+        card.classList.add('businessCard');
 
-            const fig = document.createElement('figure');
-            const logo = document.createElement('img');
-            
-            const caption = document.createElement('figcaption');
-            caption.innerHTML = 
-            `
-            <p>${m.phone}</p>
-            <p>${m.address1}</p>
-            <p>${m.address2}</p>
-            <a href="${m.website}">Website</a>
-            `;
-            logo.src = m.imageUrl;
-            logo.alt = `${m.name} logo`;
-    
-            fig.appendChild(logo);
-            fig.appendChild(caption);
-            card.appendChild(fig);
-            businessCards.appendChild(card);
-            count++;
-        }
+        const businessCardHeader = document.createElement('h3');
+        businessCardHeader.innerText = `${m.name}`;
+        card.appendChild(businessCardHeader);
+
+        const fig = document.createElement('figure');
+        const logo = document.createElement('img');
         
+        const caption = document.createElement('figcaption');
+        caption.innerHTML = 
+        `
+        <p>${m.phone}</p>
+        <p>${m.address1}</p>
+        <p>${m.address2}</p>
+        <p><strong>Membership Level:</strong> ${m.membershipLevel}</p>
+        <a href="${m.website}">Website</a>
+        `;
+        logo.src = m.imageUrl;
+        logo.alt = `${m.name} logo`;
+
+        fig.appendChild(logo);
+        fig.appendChild(caption);
+        card.appendChild(fig);
+        businessCards.appendChild(card);
     });
 }
 

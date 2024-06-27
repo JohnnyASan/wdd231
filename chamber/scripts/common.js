@@ -36,3 +36,7 @@ currentYear.textContent = "@ " + new Date().getUTCFullYear() + " Naples UT Chamb
 
 // export currentYear 
 // export lastModified
+
+function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
