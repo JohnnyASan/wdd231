@@ -7,7 +7,7 @@ main {
 }
 
 .heroImage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/chamber/images/naples_park_banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/naples_park_banner.jpg");
     height: 40vh;
 
     background-position: center;
