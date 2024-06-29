@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
-    <title>Naples UT Chamber of Commerce Directory</title>
+    <title>Discover Naples UT Chamber of Commerce</title>
     <meta name="author" content="Johnny Sanabria">
-    <meta name="description" content="Chamber of Commerce directory page for WDD 231.">
+    <meta name="description" content="Chamber of Commerce discover page for WDD 231.">
     <meta property="og:image" content="https://www.skylinepress.com/images/xl/080522-UT-Moonshine-Arch-H2320.jpg">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chamber of Commerce">
-    <meta property="og:description" content="Chamber of Commerce directory page for the WDD 231.">
-    <meta property="og:url" content="https://johnnyasan.github.io/wdd231/chamber/directory">
-    <script src="./scripts/directory.js" defer></script>
-    <link rel="stylesheet" href="./styles/directory.css">
+    <meta property="og:description" content="Chamber of Commerce discover page for the WDD 231.">
+    <meta property="og:url" content="https://johnnyasan.github.io/wdd231/chamber/discover">
+    <script src="./scripts/discover.js" defer></script>
+    <link rel="stylesheet" href="./styles/discover.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- <link rel="icon" href="./images/favicon.ico"> -->
 </head>
@@ -29,19 +29,14 @@
         <button id="navButton" type="button"></button>
         <ul class="menuLinks">
             <li><a href="./index.html" title="Home">Home</a></li>
-            <li class="currentMenuItem"><a href="#" title="Directory">Directory</a></li>
+            <li><a href="./directory.html" title="Directory">Directory</a></li>
             <li><a href="./join.html" title="Join">Join</a></li>
-            <li><a href="./discover.html" title="Discover">Discover</a></li>
+            <li class="currentMenuItem"><a href="#" title="Discover">Discover</a></li>
         </ul>
     </nav>
     
-    <main class="directoryMain">
-        <div class="layoutButtons">
-            <button id="oneColButton" type="button" value="oneColGrid">Single Column</button>
-            <button id="threeColButton" class="selected" type="button" value="threeColGrid">Triple Column</button>
-        </div>
+    <main>
         
-        <div id="membersList" class="threeColGrid"></div>
     </main>
     <footer id="footer"></footer>
 </body>
