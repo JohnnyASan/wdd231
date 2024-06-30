@@ -26,7 +26,7 @@
         </div>
     </header>
     <nav id="navElement">
-        <button id="navButton" type="button"></button>
+        <button id="navButton" type="button" aria-label="hamburger menu"></button>
         <ul class="menuLinks">
             <li><a href="./index.html" title="Home">Home</a></li>
             <li class="currentMenuItem"><a href="#" title="Directory">Directory</a></li>
@@ -37,8 +37,8 @@
     
     <main class="directoryMain">
         <div class="layoutButtons">
-            <button id="oneColButton" type="button" value="oneColGrid">Single Column</button>
-            <button id="threeColButton" class="selected" type="button" value="threeColGrid">Triple Column</button>
+            <button aria-label="one column layout" id="oneColButton" type="button" value="oneColGrid">Single Column</button>
+            <button aria-label="three column layout" id="threeColButton" class="selected" type="button" value="threeColGrid">Triple Column</button>
         </div>
         
         <div id="membersList" class="threeColGrid"></div>
