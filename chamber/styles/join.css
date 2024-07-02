@@ -1,1 +1,120 @@
 @import url("./common.css");
+
+form {
+    
+}
+
+
+
+.membershipLevelInput label:nth-of-type(1) {
+    background-color: #CD7F32;
+}
+
+.membershipLevelInput label:nth-of-type(2) {
+    background-color: #C0C0C0;
+}
+
+.membershipLevelInput label:nth-of-type(3) {
+    background-color: #D4AF37;
+}
+.membershipLevelInput label:nth-of-type(4) {
+    background-color: #E5e4e2;
+}
+
+.membershipLevelInput label input {
+    /* align-content: center; */
+    text-align: center;
+}
+
+.membershipBadges {
+    height: 40px;
+    font-size: large;
+    margin: 5px;
+    border-radius: 7rem;
+    padding: 5px;
+    padding-left: 15px;
+    border: 1px solid black;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: 5s shimmer 2.5s infinite;
+    /* font-size: 50px; */
+    max-width:200px;
+}
+  
+@keyframes shimmer {
+   100% {-webkit-mask-position:left}
+}
+
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+form {
+    margin: 1rem 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  
+    label {
+      display: block;
+      font-size: .8rem;
+      color: black;
+      padding-top: .2rem;
+    }
+    h3 {
+      font-size: .9rem;
+      color: #E07A5F;
+      margin: 1.5rem 0 .2rem 0;
+      border-bottom: 1px solid #eee;
+    }
+  
+    input[type=text],
+    input[type=tel],
+    input[type=date],
+    input[type=email],
+    select {
+      display: block;
+      margin: .1rem 0 1rem 0 ;
+      padding: .3rem;
+      border: 1px solid #999;
+      border-radius: 4px;
+      border-left-width: 5px;
+      border-left-color:#555;
+      font-size: 1rem;
+      color: #3D405B;
+      width: 250px;
+    }
+  
+    input:required {border-left-color: #d70000;}
+    input:focus {border-left-color: black; outline:none;}
+    input:required:valid{border-left-color: green;}
+  
+    input[type=submit] {
+      border: none;
+      text-align: center;
+      background-color: #3D405B;
+      color: white;
+      border-radius: 1rem;
+      padding: .75rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 1.2rem;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  }
+  input:-webkit-autofill{
+    -webkit-text-fill-color: #3D405B;
+  }

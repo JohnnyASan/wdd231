@@ -34,9 +34,30 @@
             <li><a href="./discover.html" title="Discover">Discover</a></li>
         </ul>
     </nav>
-    
     <main>
-        
+        <form action="GET" action="thankyou.html">
+            <label for="firstName"><input id="firstName" type="text" name="firstName" required autocomplete="given-name" title="First Name" placeholder="First Name"></label>
+            <label for="lastName"><input id="lastName" type="text" name="lastName" required autocomplete="family-name" title="Last Name" placeholder="Last Name"></label>
+            <label for="orgTitle"><input id="orgTitle" type="text" name="orgTitle" required autocomplete="organization-title" title="Organization Title" placeholder="Organization Title"></label>
+            <label for="email"><input id="email" type="email" name="email" required autocomplete="email" title="Email" placeholder="john.doe@email.com"></label>
+            <label for="phone"><input id="phone"type="tel" name="phone" required autocomplete="tel" title="Phone" placeholder="Phone Number"></label>
+            <label for="orgName"><input id="orgName" type="text" name="orgName" required autocomplete="organization" title="Organization Name" placeholder="Business/Organization Name"></label>
+            
+            <div class="membershipLevelInput">
+                <dialog id="membershipLevelModal">
+                    <div id="dialogDiv"></div>
+                </dialog>
+                <p>Select your Membership Level:</p>
+                
+                <label class="membershipBadges" for="levelBronze"><input type="radio" id="levelBronze" name="membershipLevel">Bronze🥉</label>
+                <label class="membershipBadges" for="levelSilver"><input type="radio" id="levelSilver" name="membershipLevel">Silver🥈</label>
+                <label class="membershipBadges" for="levelGold"><input type="radio" id="levelGold" name="membershipLevel">Gold🥇</label>
+                <label class="membershipBadges" for="levelNonProfit"><input type="radio" id="levelNonProfit" name="membershipLevel">Non-Profit😇</label>
+            </div>
+            <label for="orgDescription">Organization description <br><textarea name="orgDescription" id="orgDescription" name="orgDescription" title="Organization Description"></textarea></label>
+            <input type="datetime" id="timestamp" hidden >
+            <input type="submit" value="Apply">
+        </form>
     </main>
     <footer id="footer"></footer>
 </body>
