@@ -99,6 +99,11 @@ function populateClasses(filter) {
         block.classList.add('courseBlock');
         block.innerHTML = `${c.subject} ${c.number}<br>${c.credits} credit hours`;
         block.classList.add(c.completed === true ? 'complete' : 'incomplete');
+        
+        block.addEventListener('click', () => {
+            displayCourseDetails(c)
+        });
+        
         coursesList.appendChild(block);
     });
 }
@@ -148,5 +153,30 @@ function calcTotalCredits() {
 
 calcTotalCredits();
 
+const courseDetails = document.querySelector('#courseDetails');
+
+courseDetails.addEventListener('click', (event) => {
+    if (event.target.id !== 'dialogDiv') {
+        courseDetails.close();
+    }
+});
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `
+
+    courseDetails.showModal();
+
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    })
+}
 
 
