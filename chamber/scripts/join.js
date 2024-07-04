@@ -16,3 +16,6 @@ membershipLevelModal.addEventListener('click', (event) => {
 function displayMembershipModal() {
     membershipLevelModal.showModal();
 }
+
+const timestamp = document.querySelector('#timestamp');
+timestamp.value = new Date();
