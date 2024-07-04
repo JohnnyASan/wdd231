@@ -18,4 +18,7 @@ function displayMembershipModal() {
 }
 
 const timestamp = document.querySelector('#timestamp');
-timestamp.value = new Date();
+var now = new Date();
+now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+timestamp.value = now.toISOString().slice(0,16);
+console.log("TIMESTAMP:" + timestamp.value);
