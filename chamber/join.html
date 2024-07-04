@@ -41,9 +41,9 @@
             <label for="lastName"><input id="lastName" type="text" name="lastName" required autocomplete="family-name" title="Last Name" placeholder="Last Name"></label>
             <label for="orgTitle"><input pattern="([a-z]|[A-Z]|[\s]|[\-]){7,}" id="orgTitle" type="text" name="orgTitle" required autocomplete="organization-title" title="Organization Title" placeholder="Organization Title"></label>
             <label for="email"><input id="email" type="email" name="email" required autocomplete="email" title="Email" placeholder="john.doe@email.com"></label>
-            <label for="phone"><input id="phone"type="tel" name="phone" required autocomplete="tel" title="Phone" placeholder="Phone Number"></label>
+            <label for="phone"><input id="phone" type="tel" name="phone" required autocomplete="tel" title="Phone" placeholder="Phone Number"></label>
             <label for="orgName"><input id="orgName" type="text" name="orgName" required autocomplete="organization" title="Organization Name" placeholder="Business/Organization Name"></label>
-            <label for="orgDescription"><textarea rows="10" cols="30" name="orgDescription" id="orgDescription" name="orgDescription" title="Organization Description" placeholder="Description of Organization..."></textarea></label>
+            <label for="orgDescription"><textarea rows="10" cols="30" id="orgDescription" name="orgDescription" title="Organization Description" placeholder="Description of Organization..."></textarea></label>
             
             <div class="membershipLevelInput">
                 <dialog id="membershipLevelModal">
@@ -84,7 +84,7 @@
                 <label class="membershipBadges" for="levelGold"><input type="radio" id="levelGold" name="membershipLevel">Gold🥇</label>
                 <label class="membershipBadges" for="levelNonProfit"><input type="radio" id="levelNonProfit" name="membershipLevel">Non-Profit😇</label>
             </div>
-            <label for="timestamp" hidden><input name="timestamp" type="datetime" id="timestamp" hidden ></label>
+            <label for="timestamp" hidden><input name="timestamp" type="datetime-local" id="timestamp" hidden></label>
             <input type="submit" value="Apply">
         </form>
     </main>
