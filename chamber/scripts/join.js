@@ -8,7 +8,7 @@ membershipHelp.addEventListener('click', () => {
 const membershipLevelModal = document.querySelector('#membershipLevelModal');
 
 membershipLevelModal.addEventListener('click', (event) => {
-    if (event.target.id !== 'dialogDiv') {
+    if (event.target.id === 'membershipLevelModal') {
         membershipLevelModal.close();
     }
 });
@@ -46,7 +46,7 @@ function displayMembershipModal() {
 
     membershipLevelModal.showModal();
 
-    closeModal.addEventListener('click', () => {
-        membershipLevelModal.close();
-    })
+    // closeModal.addEventListener('click', () => {
+    //     membershipLevelModal.close();
+    // })
 }
