@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #255876;
+    --secondary-color: #f2b143;
+    --accent1-color: #f9fafa;
+    --accent2-color: #d5d8d9;
+    --accent3-color: #04293d;
+
+    --heading-font: 'Madimi One', sans-serif; 
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+#sitePlan {
+    background-color: var(--accent2-color);
+    p {
+        color: var(--primary-color);
+    };
+
+    img {
+        width: 500px;
+    }
+}
