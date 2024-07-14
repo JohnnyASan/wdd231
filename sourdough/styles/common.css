@@ -16,7 +16,7 @@
 p, li {
     color: var(--primary-color);
     font-family: var(--paragraph-font);
-};
+}
 
 h1 {
     color: var(--accent3-color);
