@@ -11,20 +11,19 @@
 
 #sitePlan {
     background-color: var(--accent2-color);
-    p, li {
-        color: var(--primary-color);
-        font-family: var(--paragraph-font);
-    };
+}
 
-    h1 {
-        color: var(--accent3-color);
-        font-family: var(--heading-font);
-    }
+p, li {
+    color: var(--primary-color);
+    font-family: var(--paragraph-font);
+};
 
-
-    img {
-        width: 500px;
-    }
+h1 {
+    color: var(--accent3-color);
+    font-family: var(--heading-font);
+}
 
 
+img {
+    width: 500px;
 }
