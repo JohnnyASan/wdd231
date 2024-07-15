@@ -31,7 +31,7 @@
 }
 
 .sideBarItem > h2,p, figcaption {
-  color: var(--accent2-color);
+  color: var(--secondary-color);
   font-family: var(--paragraph-font);  
 }
 
@@ -68,7 +68,7 @@
     text-transform: uppercase;
   }
   .calendar__day-names {
-    border-bottom: 0.1rem solid #828889;
+    border-bottom: 0.1rem solid #000000;
     display: flex;
     gap: 1.2rem;
     margin-bottom: 0.8rem;
@@ -76,7 +76,7 @@
   }
   .calendar__day-name {
     aspect-ratio: 1;
-    color: #828889;
+    color: #000000;
     font-weight: normal;
     text-align: center;
     width: 2.4rem;
