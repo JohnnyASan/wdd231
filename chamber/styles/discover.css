@@ -19,8 +19,20 @@
     flex-direction: column;
     align-items: center;
 }
-.sideBar h2 {
+.sideBar h2, p {
     text-align: center;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.sideBarItem {
+  background-color: var(--primary-color);
+}
+
+.sideBarItem > h2,p, figcaption {
+  color: var(--accent2-color);
+  font-family: var(--paragraph-font);  
 }
 
 #eventImage {
