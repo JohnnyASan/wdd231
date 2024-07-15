@@ -22,3 +22,26 @@ calendar.innerHTML = `
         </div>
     </div>
 `;
+
+function getDaysDiff(start, end){
+    const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
+
+    return Math.round(Math.abs((start - end) / oneDay));
+}
+
+const dynamicText = document.querySelector('#welcomeText');
+var lastVisitedDate = Date.parse(localStorage.lastVisitedDate);
+var currentDate = new Date();
+if (lastVisitedDate != "") {
+    var daysSinceLastVisit = getDaysDiff(lastVisitedDate, currentDate);
+    if (daysSinceLastVisit < 1)
+        dynamicText.innerHTML = '<h2>Back so soon! Awesome!</h2>';
+    else if (daysSinceLastVisit >= 1) {
+        dynamicText.textContent = `<h2>You last visited ${daysSinceLastVisit} days ago</h2>`
+    }
+}
+
+
+
+
+localStorage.lastVisitedDate = currentDate;

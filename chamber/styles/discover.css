@@ -138,7 +138,7 @@
   }
 }
 
-@media only screen and (mix-width: 38rem) {
+@media only screen and (min-width: 38rem) {
   img:hover {
     -moz-box-shadow: 1px 1px 5px #999;
     -webkit-box-shadow: 1px 1px 5px #999;
