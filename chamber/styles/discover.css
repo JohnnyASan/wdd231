@@ -19,20 +19,18 @@
     flex-direction: column;
     align-items: center;
 }
-.sideBar h2, p {
-    text-align: center;
-    padding: 1rem;
-    padding-top: 0;
-    padding-bottom: 0;
-}
 
 .sideBarItem {
   background-color: var(--primary-color);
 }
 
-.sideBarItem > h2,p, figcaption {
+.sideBarItem > h2,.sideBarItem > p, .sideBarItem > figure > figcaption {
   color: var(--secondary-color);
   font-family: var(--paragraph-font);  
+  text-align: center;
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #eventImage {
@@ -109,3 +107,11 @@
     box-shadow: 0 0 0 0.4rem #f2b2435b;
     color: #000;
   }
+
+
+  @media only screen and (min-width: 37.99999rem) {
+
+    #discoverContent {
+        grid-template-columns: 1fr !important;
+    }
+}
