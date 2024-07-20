@@ -4,9 +4,9 @@ const baseURL = 'api.edamam.com';
 const recipePath = 'api/recipes/v2';
 // https://developer.edamam.com/edamam-docs-recipe-api
 
-async function searchRecipe(keyword) {
+export async function searchRecipe(keyword) {
     try {
-        const res = await fetch(`${baseUrl}/${recipePath}?app_id=${appId}&app_key=${appKey}&type=public&q=${keyword}`, {
+        const res = await fetch(`https://${baseURL}/${recipePath}?app_id=${appId}&app_key=${appKey}&type=public&q=${keyword}`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
@@ -20,4 +20,12 @@ async function searchRecipe(keyword) {
     }
 }
 
-export default searchRecipe;
+export async function searchRecipeLocal() {
+    try {
+        const res = await fetch('./data/recipes.json');
+        return await res.json();
+    }
+    catch {
+
+    }
+}
