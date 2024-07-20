@@ -13,9 +13,10 @@ async function loadRecipes() {
             recipeBlock.classList.add('recipeBlock');
             recipeBlock.innerHTML = 
             `
+                
+                <img src="${x.recipe.image}" alt="${x.recipe.label}">
                 <h3>${x.recipe.label}</h3>
-                <img src="${x.recipe.image}">
-            `;
+                `;
             recipeBlock.addEventListener('click', () => {
                 dialogDiv.innerHTML = 
                 `

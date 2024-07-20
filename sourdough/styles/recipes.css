@@ -1,1 +1,35 @@
 @import url("./common.css");
+
+
+#recipesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    margin: 1vw;
+    border: 1px solid black;
+    padding-top: 15px;
+}
+
+.recipeBlock {
+    background-color: var(--accent2-color);
+    padding-top: 10px;
+    margin: 15px;
+    border-radius: 5%;
+}
+.recipeBlock h3 {
+    color: var(--secondary-color);
+}
+
+.recipeBlock img {
+    width: 200px;
+}
+
+/* Large CSS */
+@media only screen and (min-width: 38rem) {
+    #recipesGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* max-width: 500px; */
+    }
+}

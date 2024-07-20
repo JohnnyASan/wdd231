@@ -24,7 +24,6 @@ function show(cup) {
 const showInfo = document.querySelector('#results');
 showInfo.innerHTML = `
 <p>Thank you ${show('first')} ${show('last')}!</p>
-<p>${show('orgName')}</p>
 <p>Your Phone: ${show('phone')}</p>
 <p>Your Email: <a href="mailto:${show('email')}">${show('email')}</a></p>
 <p>Time: ${show('timestamp').toLocaleString().replaceAll('%2F', '/').replaceAll('%3A', ':').replaceAll('%2C', ',')}</p>
