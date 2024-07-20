@@ -19,7 +19,7 @@ async function loadRecipes() {
             recipeBlock.addEventListener('click', () => {
                 dialogDiv.innerHTML = 
                 `
-                <img src="${x.recipe.image}">
+                <img src="${x.recipe.image}" alt="${x.recipe.label}" loading="lazy">
                 <div>
                     <h3>${x.recipe.label}</h3>
                     <p><strong>Ingredients:</strong><br>-${x.recipe.ingredientLines.join('<br>-')}</p>
