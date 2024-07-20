@@ -1,9 +1,8 @@
 :root {
     --primary-color: #255876;
-    --secondary-color: #f2b143;
-    --accent1-color: #f9fafa;
-    --accent2-color: #d5d8d9;
-    --accent3-color: #04293d;
+    --secondary-color: #f9fafa;
+    --accent1-color: #d5d8d9;
+    --accent2-color: #04293d;
 
     --heading-font: 'Madimi One', sans-serif; 
     --paragraph-font: 'Roboto', sans-serif;
@@ -13,17 +12,162 @@
     background-color: var(--accent2-color);
 }
 
-p, li {
-    color: var(--primary-color);
+p, li, label {
+    color: var(--accent2-color);
     font-family: var(--paragraph-font);
 }
 
 h1 {
-    color: var(--accent3-color);
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+}
+
+h2, h3 {
+    color: var(--accent2-color);
     font-family: var(--heading-font);
 }
 
 
 img {
     width: 500px;
+}
+
+body {
+    margin: 0;
+    /* margin-bottom: 225px; */
+}
+
+header {
+    background-color: var(--accent2-color);
+    display: flex;
+}
+
+header img {
+    width: 100px;
+    margin: 10px;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+ul.menuLinks li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: Roboto;
+    display: block;
+    padding: .75rem 2vw;
+}
+
+li.currentMenuItem {
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* Small CSS */
+#navButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
+#navButton::before {
+    content: "\2630";
+}
+
+/*  CSS for open class */
+
+#navButton.open::before {
+    content: "x";
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--accent1-color);
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.footerCell {
+    padding: 8px;
+    padding-top: 20px;
+    text-align: left;
+    
+}
+
+.footerCell a img {
+    height: 40px;
+    width: 40px;
+}
+
+.footerCell p {
+    padding: 0;
+    color: var(--accent2-color);
+}
+
+a.closedLink {
+    color: black !important;
+}
+
+
+/* Large CSS */
+@media only screen and (min-width: 38rem) {
+    #navButton {
+        display: none;
+        
+    }
+
+    nav {
+        grid-template-rows: 1fr !important;
+    }
+
+    a.closedLink {
+        color: var(--secondary-color) !important;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks a:hover {
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    #sourdoughGuides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
 }

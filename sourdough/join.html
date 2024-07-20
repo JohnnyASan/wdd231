@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <title>Join the Weekly Sourdough Newsletter</title>
+    <meta name="author" content="Johnny Sanabria">
+    <meta name="description" content="Chamber of Commerce join page for WDD 231.">
+    <meta property="og:image" content="https://www.bing.com/images/search?view=detailV2&ccid=9IkDlSw0&id=0FC621135FFA024F17A15879F5DE9B3C785C03B1&thid=OIP.9IkDlSw0HpcCi3H4w85saQHaE8&mediaurl=https%3a%2f%2fwww.breadahead.com%2fwp%2fwp-content%2fuploads%2fbread_banner-1024x683.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.f48903952c341e97028b71f8c3ce6c69%3frik%3dsQNceDyb3vV5WA%26pid%3dImgRaw%26r%3d0&exph=683&expw=1024&q=soudough+bread+banner&simid=608028492153647401&FORM=IRPRST&ck=1D6BAA441228C3C17BD6E7DC3B3AEBE8&selectedIndex=4&itb=0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:description" content="Chamber of Commerce join page for the WDD 231.">
+    <meta property="og:url" content="https://johnnyasan.github.io/wdd231/chamber/join">
+    <script src="./scripts/join.js" defer></script>
+    <link rel="stylesheet" href="./styles/join.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./images/favicon.ico">
+</head>
+<body>
+    <div id="header"></div>
+    
+    <main>
+        <h2>Join the Weekly Sourdough Newsletter</h2>
+        <form method="GET" action="thankyou.html">
+            <label for="firstName"><input id="firstName" type="text" name="firstName" required autocomplete="given-name" title="First Name" placeholder="First Name"></label>
+            <label for="lastName"><input id="lastName" type="text" name="lastName" required autocomplete="family-name" title="Last Name" placeholder="Last Name"></label>
+            <label for="orgTitle"><input pattern="([a-z]|[A-Z]|[\s]|[\-]){7,}" id="orgTitle" type="text" name="orgTitle" required autocomplete="organization-title" title="Organization Title" placeholder="Organization Title"></label>
+            <label for="email"><input id="email" type="email" name="email" required autocomplete="email" title="Email" placeholder="john.doe@email.com"></label>
+            <label for="phone"><input id="phone" type="tel" name="phone" required autocomplete="tel" title="Phone" placeholder="Phone Number"></label>
+            <label for="orgName"><input id="orgName" type="text" name="orgName" required autocomplete="organization" title="Organization Name" placeholder="Business/Organization Name"></label>
+            <label for="orgDescription"><textarea rows="10" cols="30" id="orgDescription" name="orgDescription" title="Organization Description" placeholder="Description of Organization..."></textarea></label>
+            
+            <div class="membershipLevelInput">
+                <dialog id="membershipLevelModal">
+                    <div id="dialogDiv">
+                        <table>
+                            <tr>
+                                <th>Membership Level</th>
+                                <th>Description</th>
+                                <th>Monthly Fee</th>
+                            </tr>
+                            <tr>
+                                <td>Bronze</td>
+                                <td>Bronze Membership Description</td>
+                                <td>$35</td>
+                            </tr>
+                            <tr>
+                                <td>Silver</td>
+                                <td>Silver Membership Description</td>
+                                <td>$75</td>
+                            </tr>
+                            <tr>
+                                <td>Gold</td>
+                                <td>Gold Membership Description</td>
+                                <td>$125</td>
+                            </tr>
+                            <tr>
+                                <td>Non-Profit</td>
+                                <td>Non-Profit Membership Description</td>
+                                <td>$0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </dialog>
+                <p>Select your Membership Level (<span id="levelHelp">Help</span>): </p>
+                
+                <label class="membershipBadges" for="levelBronze"><input type="radio" id="levelBronze" name="membershipLevel" value="Bronze">Bronze🥉</label>
+                <label class="membershipBadges" for="levelSilver"><input type="radio" id="levelSilver" name="membershipLevel" value="Silver">Silver🥈</label>
+                <label class="membershipBadges" for="levelGold"><input type="radio" id="levelGold" name="membershipLevel" value="Gold">Gold🥇</label>
+                <label class="membershipBadges" for="levelNonProfit"><input type="radio" id="levelNonProfit" name="membershipLevel" value="Non-Profit">Non-Profit😇</label>
+            </div>
+            <input name="timestamp" type="hidden" id="timestamp" title="timestamp" value="2018-06-07T00:00" hidden>            <input type="submit" value="Apply">
+        </form>
+    </main>
+    <footer id="footer"></footer>
+</body>
+</html>

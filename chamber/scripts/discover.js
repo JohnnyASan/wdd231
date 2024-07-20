@@ -43,5 +43,4 @@ if (lastVisitedDate != "") {
 
 
 
-
 localStorage.lastVisitedDate = currentDate;
