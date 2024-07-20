@@ -6,7 +6,7 @@ const recipesGrid = document.querySelector('#recipesGrid');
 const dialogDiv = document.querySelector('#dialogDiv');
 
 async function loadRecipes() {
-    searchRecipeLocal().then(res => {
+    searchRecipe('sourdough').then(res => {
         console.log(res);
         res.hits.forEach(x => {
             const recipeBlock = document.createElement('div');
