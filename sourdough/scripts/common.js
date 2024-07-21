@@ -30,10 +30,10 @@ else homeNavLink.classList.add('currentMenuItem');
 const footer = document.querySelector('#footer');
 footer.innerHTML = 
 `<div id="contactInfo" class="footerCell">
-    <p id="contactName">Naples UT Chamber of Commerce</p>
+    <p id="contactName">Sourdough Beginners' Guide</p>
     <p id="contactAddress1">123 Sesame St</p>
     <p id="contactAddress2">Naples, UT 84078</p>
-    <p id="contactEmail">contact@napleschamber.com</p>
+    <p id="contactEmail">contact@email.com</p>
     <p id="contactPhone"></p>
 </div>
 <div id="socialMedia" class="footerCell">
@@ -44,7 +44,7 @@ footer.innerHTML =
 <div id="devDetails" class="footerCell">
     <p>WDD231 Class Project</p>
     <p>Johnny Sanabria</p>
-    <p id="currentYear"> Naples UT Chamber of Commerce</p>
+    <p id="currentYear"> Sourdough Beginners' Guide</p>
     <p id="lastModified"></p>
 </div>`;
 
