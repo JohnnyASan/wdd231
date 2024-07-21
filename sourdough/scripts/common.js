@@ -66,4 +66,4 @@ lastModified.innerHTML = `Last Updated on <i>${document.lastModified}</i>`;
 
 
 const currentYear = document.getElementById('currentYear');
-currentYear.textContent = "@ " + new Date().getUTCFullYear() + " Naples UT Chamber of Commerce";
+currentYear.textContent = "@ " + new Date().getUTCFullYear() + " Sourdough Beginners' Guide";
