@@ -58,7 +58,10 @@ async function loadText() {
     var res = await fetch('./data/recipeDynamicText.json');
     res = await res.json();
     var timesVisited = parseInt(localStorage.timesVisited);
-    if (timesVisited == 1) {
+    if (timesVisited == 0)  {
+        // do nothing
+    }
+    else if (timesVisited == 1) {
         dynamicText.textContent = res[0];
     }
     else if (timesVisited == 2) {
