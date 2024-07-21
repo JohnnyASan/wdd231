@@ -48,3 +48,34 @@ function displayModal() {
 }
 
 loadRecipes();
+
+function randomNumber(min, max) {
+    return (Math.random() * (max - min) + min).toFixed(0);
+}
+
+const dynamicText = document.querySelector('#dynamicText');
+async function loadText() {
+    var res = await fetch('./data/recipeDynamicText.json');
+    res = await res.json();
+    var timesVisited = parseInt(localStorage.timesVisited);
+    if (timesVisited == 1) {
+        dynamicText.textContent = res[0];
+    }
+    else if (timesVisited == 2) {
+        dynamicText.textContent = res[1];
+    }
+    else if (timesVisited == 3) {
+        dynamicText.textContent = res[2];
+    }
+    else if (timesVisited == 4) {
+        dynamicText.textContent = res[3];
+    }
+    else {
+        dynamicText.textContent = res[randomNumber(0,4)];
+    }
+}
+
+localStorage.lastVisited = new Date();
+var timesVisitedFromStorage = parseInt(localStorage.timesVisited);
+localStorage.timesVisited = timesVisitedFromStorage !== timesVisitedFromStorage ? 0 : timesVisitedFromStorage + 1;
+loadText();
